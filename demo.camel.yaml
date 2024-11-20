@@ -1,0 +1,15 @@
+- route:
+    id: route-e063
+    nodePrefixId: route-5f0
+    from:
+      id: from-dfdb
+      uri: kamelet:timer-source
+      parameters:
+        message: Hello Sysco
+      steps:
+        - process:
+            id: process-8ec4
+            ref: CustomProcessor
+        - log:
+            id: log-4eef
+            message: ${body}
